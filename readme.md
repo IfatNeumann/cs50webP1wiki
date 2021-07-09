@@ -5,3 +5,4 @@ Run project with `py manage.py runserver`
 * I had to remove `#!/usr/bin/env python` from manage.py in order to make it run.
 
 * Entry Page
+* Index Page
