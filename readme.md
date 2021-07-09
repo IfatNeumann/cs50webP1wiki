@@ -6,3 +6,4 @@ Run project with `py manage.py runserver`
 
 * Entry Page
 * Index Page
+* Search

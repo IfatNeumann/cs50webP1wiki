@@ -35,3 +35,17 @@ def get_entry(title):
         return f.read().decode("utf-8")
     except FileNotFoundError:
         return None
+
+def get_substring_results(substring):
+    """
+    Retrieves entry results by its search query. If no such
+    entry exists, the function returns None.
+    """
+    _, filenames = default_storage.listdir("entries")
+    all_entries = list(sorted(re.sub(r"\.md$", "", filename)
+                for filename in filenames if filename.endswith(".md")))
+    results = []
+    for entry in all_entries:
+        if substring.lower() in entry.lower():
+            results.append(entry)
+    return results
