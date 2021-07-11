@@ -5,12 +5,15 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Results</h1>
-
+    <h1>Sorry,</h1>
+    <h2>the query does not match the name of an encyclopedia entry.</h2>
+    {% if entries != None %}
+    <h3>Maybe you meant:</h3>
     <ul>
         {% for entry in entries %}
             <li><a href="/wiki/{{entry}}">{{ entry }}</a></li>
         {% endfor %}
     </ul>
+    {% endif %}
 
 {% endblock %}

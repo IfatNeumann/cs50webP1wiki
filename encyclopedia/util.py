@@ -48,4 +48,6 @@ def get_substring_results(substring):
     for entry in all_entries:
         if substring.lower() in entry.lower():
             results.append(entry)
+    if results == []:
+        return None
     return results
